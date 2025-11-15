@@ -1,7 +1,7 @@
 # Compilador y opciones
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
-LIBS = -lm -lportaudio -lX11 -lpthread
+LIBS = -lm -lportaudio -lX11 -lpthread -lyaml
 
 # Directorios
 SRC_DIR = src
@@ -9,7 +9,7 @@ OBJ_DIR = tmp
 BIN_DIR = bin
 
 # Lista de archivos fuente y objetos
-SRCS = sinestesia-theremin.c
+SRCS = rpnf.c sinestesia-theremin.c
 
 OBJS = $(patsubst %.c,$(OBJ_DIR)/%.o,$(SRCS))
 
